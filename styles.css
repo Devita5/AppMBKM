@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px 30px;
+    border-bottom: 2px solid #e0e0e0;
+    flex-wrap: wrap; /* Membuat elemen dalam header dapat membungkus jika layar kecil */
+    gap: 10px; /* Memberi jarak antar elemen saat membungkus */
+}
+
+.logo-merdeka {
+    height: 70px;
+    margin-right: 20px;
+}
+
+.header-right {
+    text-align: left;
+    max-width: calc(100% - 160px); /* Pastikan teks tidak melebihi ruang yang tersedia */
+    flex-grow: 1; /* Membuat elemen teks mengambil ruang sisa */
+}
+
+.header-right h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #0044ccd0;
+}
+
+.header-right p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: gray;
+    word-wrap: break-word; /* Memungkinkan teks panjang untuk membungkus */
+}
+
+.logo-upj {
+    height: 70px;
+    margin-left: auto;
+}
+
+/* Footer dengan tiga bagian sejajar */
+footer {
+    display: flex;
+    justify-content: space-between; /* Menyebar bagian kiri, tengah, dan kanan */
+    align-items: center; /* Menyelaraskan teks secara vertikal */
+    padding: 10px 30px;
+    background-color: #003366;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1; /* Membuat setiap bagian memiliki lebar yang sama */
+    display: flex;
+    flex-direction: column; /* Menata teks dalam kolom */
+    justify-content: center; /* Menyelaraskan teks secara vertikal */
+    text-align: left; /* Default untuk bagian kiri */
+}
+
+.footer-center {
+    text-align: center; /* Teks bagian tengah rata tengah */
+}
+
+.footer-right {
+    text-align: right; /* Teks bagian kanan rata kanan */
+}
+
+/* Media Query untuk layar kecil */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right {
+        max-width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        margin: 5px 0;
+    }
+}
