@@ -19,6 +19,62 @@
             <img src="https://upload.wikimedia.org/wikipedia/id/thumb/d/d2/Logo-upj.webp/640px-Logo-upj.webp.png" alt="UPJ Logo" class="logo-upj">
         </header>
 
+        <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('beranda')">Beranda</a></li>
+            <li><a href="#" onclick="showSection('pendaftaran')">Pendaftaran</a></li>
+            <li><a href="#" onclick="showSection('laporan')">Laporan & Hasil</a></li>
+            <li><a href="#" onclick="showSection('admin')">Admin</a></li>
+            <li><a href="#" onclick="showSection('profil')">Profil</a></li>
+            <li><a href="#" onclick="showSection('ttg')">Tentang Pembuat</a></li>
+        </ul>
+    </nav>
+
+    <section id="content">
+        <!-- Beranda -->
+        <div id="beranda">
+            <h2>Merdeka Belajar Kampus Merdeka</h2>
+            <p>Universitas Pembangunan Jaya</p>
+            <p>MBKM merupakan program Kemendikbudristek yang bertujuan mendorong mahasiswa untuk menguasai berbagai keilmuan
+                sebagai bekal memasuki dunia kerja.</p><p>Merdeka Belajar Kampus Merdeka (MBKM) adalah sebuah inisiatif
+                dari Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia yang bertujuan untuk memperkuat sistem pendidikan tinggi di Indonesia.</p>
+        </div>
+
+        <!-- Pendaftaran -->
+        <div id="pendaftaran" style="display: none;">
+            <h2>Form Pendaftaran MBKM</h2>
+            <a href="Form_Daftar_MBKM.doc" download>
+                <button class="button">Unduh File</button>
+            </a>
+            
+            <button class="button" onclick="document.getElementById('uploadForm').style.display='block'">Unggah File</button>
+            
+            <div id="uploadForm" style="display:none;">
+                <form action="daftar.php" method="post" enctype="multipart/form-data">
+                    <label for="fileUpload">Pilih file untuk diunggah:</label><br>
+                    <label for="fileUpload">*Notes*</label><br>
+                    <label for="fileUpload">Harap upload file dengan format "MBKM_Daftar_Nama_NIM.pdf"</label><br>
+                    <input type="file" name="fileUpload" id="fileUpload" required>
+                    <button type="submit" class="button">Unggah</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Laporan -->
+        <div id="laporan" style="display: none;">
+            <h2>Laporan dan Hasil Kegiatan MBKM</h2>
+            <div style="display: flex; flex-direction: column; height: 150px; justify-content: space-between;">
+                <p>Unduh Surat Laporan Kegiatan Pelaksanaan Dibawah Ini</p>
+                <a href="Surat_Laporan_Kegiatan_MBKM.docx" download>
+                    <button class="button">File Laporan Kegiatan</button>
+                </a>
+                
+                <a href="Surat_Laporan_Hasil_Kegiatan_MBKM.docx" download>
+                    <button class="button">File Laporan Hasil Kegiatan</button>
+                </a>
+            </div>
+        </div>
+
         <!-- Footer -->
         <footer>
             <div class="footer-left">
